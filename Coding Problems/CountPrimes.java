@@ -22,7 +22,7 @@
 //Output 2:
 //0
 
-public class Solution {
+public class CountPrimes {
     public int solve(int A) {
         if(A == 1){
             return 0;
