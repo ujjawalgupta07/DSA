@@ -41,30 +41,18 @@ public class SecondLargestInArray {
         if(A.length < 2){
             return -1;
         }
-        int i = 0;
-        int j = 1;
-        int largest = 0;
-        int secondLargest = 0;
-        if(A[i] > A[j]){
-            largest = A[i];
-            secondLargest = A[j];
-        }
-        else{
-            largest = A[j];
-            secondLargest = A[i];
-        }
-        for(int k = 2; k < A.length; k++){
-            if(A[k] > largest){
-                int temp = largest;
-                largest = A[k];
-                secondLargest = temp;
+        int l = -1;
+        int sl = -1;
+        for(int i = 0 ; i < A.length; i++){
+            if(A[i] > l){
+                sl = l;
+                l = A[i];
             }
-            else if(A[k] < largest && A[k] > secondLargest){
-                secondLargest = A[k];
+            else if(A[i] < l && A[i] > sl){
+                sl = A[i];
             }
-
         }
 
-        return secondLargest;
+        return sl;
     }
 }
