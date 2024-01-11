@@ -64,7 +64,7 @@
 
 //-=========================SOLUTION 1=================================
 
-public class Solution {
+public class PickFromBothSides {
     public int solve(int[] A, int B) {
         int n = A.length;
         int[] ps = new int[n];
